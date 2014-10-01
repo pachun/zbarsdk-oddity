@@ -19,6 +19,10 @@ rake clean:all
 
 [delete you app's /vendor directory just to explicitly take as back to a state file/dir wise that I understand to be **exactly** the same as before we built anything]
 
+[Now make a new directory and copy the files in this project to that new directory - run those same commands and everything works]
+
+Now, back to the initial project:
+
 bundle (I don't think we need this agian, but just to be sure -- looks exactly the same to me as the process earlier)
 
 rake pod:install
@@ -56,3 +60,5 @@ The following build commands failed:
 (8 failures)
     ERROR! Building vendor project `vendor/Pods' failed to create at least one `.a' library.
 ```
+
+It seems once a directory has had an app built inside it, it can't be fully "cleaned". You just need a new container folder to make it work. That's archaic.
